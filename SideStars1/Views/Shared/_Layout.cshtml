@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/scripts/bootstrap.bundle.min")
+
+</head>
+<body style="background-color:black;">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        @Html.ActionLink("SideStars", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link btn btn-outline-light" href="/Inicio/Index">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-outline-danger  " href="/Peliculas/About">Peliculas</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-outline-success" href="/Series/Contact">Series</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-outline-primary" href="/Cartelera/Index">Cartelera</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-outline-warning  " href="/Proximos Extrenos /Index">Proximos Extrenos</a></li>
+
+            </ul>
+            @Html.Partial("_LoginPartial")
+        </div>
+    </nav>
+    <header>
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="~/Recursos/Videos/Joker  Harley   El amor entre.mp4" type="video/mp4">
+        </video>
+        <div class="container h-100">
+            <div class="d-flex h-100 text-center align-items-center">
+                <div class="w-100 text-white">
+                    <h1 class="display-3">Joker Y  Harley Quinns</h1>
+                    <p class="lead mb-0">El Amor Toxico</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <p></p>
+                    <p></p>
+                    <p>Aqui Puedes Encontrar Peliculas,series y entretenimiento para toda tu familia</p>
+                    <p class="mb-0">
+                         <a></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Angelica y su grupo</p>
+        </footer>
+    </div>
+
+
+    @*<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>*@
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
